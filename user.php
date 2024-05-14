@@ -1,41 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form id="login-form">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <button type="submit">Login</button>
-    </form>
-  </div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Here!</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
 
-  <script>
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // prevent form submission
+<form class="box" action="index.html" method="post">
+  <h1>Login</h1>
+  <input type="text" name="username" placeholder="Username" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <input type="submit" name="login" value="Login">
+</form>
 
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
-
-      // Contoh sederhana: Cek apakah username dan password sesuai
-      if (username === 'admin' && password === 'admin') {
-        window.location.href = 'welcome.html?username=' + encodeURIComponent(username);
-      } else {
-        alert('Username atau password salah!');
-      }
-    });
-  </script>
-</body>
+  </body>
 </html>
